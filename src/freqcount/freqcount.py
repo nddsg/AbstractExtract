@@ -52,3 +52,27 @@ for i in range(1,11):
 print "\nTop 10 Triple"
 for i in range(1,11):
 	print sortedtriples[len(sortedtriples)-i]
+	
+output = open('noun-freq.txt', 'w')
+output.write("Nouns Frequency \n")
+for noun in sortednouns:
+	output.write(noun[0] + "," + str(noun[1]) + "\n")
+output.close()
+
+output = open('action-freq.txt', 'w')
+output.write("Actions Frequency \n")
+for actions in sortedactions:
+	output.write(actions[0] + "," + str(actions[1]) + "\n")
+output.close()
+
+output = open('object-freq.txt', 'w')
+output.write("Objects Frequency \n")
+for objects in sortedobjects:
+	output.write(objects[0] + "," + str(objects[1]) + "\n")
+output.close()
+
+output = open('triple-freq.txt', 'w')
+output.write("Triples Frequency \n")
+for triples in sortedtriples:
+	output.write(triples[0] + "," + str(triples[1]) + "\n")	
+output.close()
